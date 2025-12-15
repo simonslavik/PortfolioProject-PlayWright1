@@ -1,8 +1,53 @@
 
-# Playwright
+# Playwright Test Logs
+logs/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies
 node_modules/
-/test-results/
-/playwright-report/
+package-lock.json
+yarn.lock
+
+# Test Results & Reports
+test-results/
+playwright-report/
+*.tracezip
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Browser Downloads
+downloads/
+temp/
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.iml
+
+# Screenshots & Videos
+screenshots/
+videos/
+traces/
+
+# Build outputs
+dist/
+build/
+.next/
+
+# Misc
+*.pid
+*.seed
+*.pid.lock
