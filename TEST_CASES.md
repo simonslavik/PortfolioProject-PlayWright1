@@ -8,11 +8,11 @@
 | TC-04 | Login with empty username and password | 1. Open Sauce Demo<br>2. Leave username and password empty<br>3. Click Login                    | Error message: username required           |
 | TC-05 | Login with locked-out user             | 1. Open Sauce Demo<br>2. Enter locked-out username<br>3. Enter valid password<br>4. Click Login | User is blocked with correct error message |
 
-> 📌 Negative testing and business rules awareness
+Note: Includes negative testing and business rules validation
 
 ---
 
-## 🛍️ 2. Product Page Test Cases
+## 2. Product Page Test Cases
 
 | TC    | Description                                   | Expected Result                                     |
 | ----- | --------------------------------------------- | --------------------------------------------------- |
@@ -22,11 +22,11 @@
 | TC-09 | Add multiple products to cart                 | Correct item count shown in cart                    |
 | TC-10 | Verify product sorting by price (low to high) | Products are sorted correctly                       |
 
-> 📌 Sorting tests impress interviewers
+Note: Includes sorting and filtering functionality
 
 ---
 
-## 🛒 3. Cart Test Cases
+## 3. Cart Test Cases
 
 | TC    | Description                          | Expected Result                       |
 | ----- | ------------------------------------ | ------------------------------------- |
@@ -37,7 +37,7 @@
 
 ---
 
-## 💳 4. Checkout Test Cases (Critical Flow)
+## 4. Checkout Test Cases
 
 | TC    | Description                          | Expected Result                   |
 | ----- | ------------------------------------ | --------------------------------- |
@@ -47,22 +47,22 @@
 | TC-18 | Verify total price calculation       | Total = item price + tax          |
 | TC-19 | Complete checkout process            | Order confirmation page displayed |
 
-> 📌 Shows attention to calculations
+Note: Includes total price calculation and tax validation
 
 ---
 
-## 🚪 5. Logout Test Cases
+## 5. Logout Test Cases
 
 | TC    | Description                      | Expected Result                               |
 | ----- | -------------------------------- | --------------------------------------------- |
 | TC-20 | Logout from application          | User is redirected to login page              |
 | TC-21 | Verify session ends after logout | User cannot access product page without login |
 
-> 📌 Session validation = professional QA mindset
+Note: Includes session validation
 
 ---
 
-## 🔒 6. Security & Session Tests (Bonus)
+## 6. Security & Session Tests
 
 | TC    | Description                       | Expected Result          |
 | ----- | --------------------------------- | ------------------------ |
@@ -71,7 +71,7 @@
 
 ---
 
-## 🧪 7. UI & Usability Tests (Portfolio Boost)
+## 7. UI & Usability Tests
 
 | TC    | Description                                 | Expected Result                 |
 | ----- | ------------------------------------------- | ------------------------------- |

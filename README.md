@@ -1,10 +1,10 @@
-# 🎭 Sauce Demo E2E Test Suite with Playwright
+# Sauce Demo E2E Test Suite with Playwright
 
-A comprehensive, enterprise-level end-to-end test automation suite built with **Playwright** testing framework. This project demonstrates advanced QA automation skills including test design, architecture patterns, CI/CD integration, and best practices.
+End-to-end test automation suite built with **Playwright** testing framework for the Sauce Demo e-commerce application.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -19,50 +19,50 @@ A comprehensive, enterprise-level end-to-end test automation suite built with **
 
 ---
 
-## 🎯 Overview
+## Overview
 
-This project tests the **Sauce Demo** e-commerce application (https://www.saucedemo.com/) with **25+ comprehensive test cases** covering:
+This project tests the **Sauce Demo** e-commerce application (https://www.saucedemo.com/) with comprehensive test cases covering:
 
-- ✅ User Authentication (Login scenarios)
-- ✅ Product Catalog (Browsing, Sorting, Filtering)
-- ✅ Shopping Cart Operations
-- ✅ Checkout Process & Validation
-- ✅ Session Management & Security
-- ✅ UI/Usability Testing
-- ✅ API Integration Testing
-- ✅ Visual Regression Testing
-- ✅ Data-Driven Testing
+- User Authentication (Login scenarios)
+- Product Catalog (Browsing, Sorting, Filtering)
+- Shopping Cart Operations
+- Checkout Process & Validation
+- Session Management & Security
+- UI/Usability Testing
+- API Integration Testing
+- Visual Regression Testing
+- Data-Driven Testing
 
 ---
 
-## ✨ Features
+## Features
 
-### 🏗️ Enterprise Architecture
+### Architecture
 
-- **Page Object Model (POM)** - Structured, maintainable page abstractions
-- **Custom Fixtures** - Reusable test setup with authentication fixtures
+- **Page Object Model (POM)** - Structured page abstractions
+- **Custom Fixtures** - Reusable test setup with authentication
 - **TypeScript Support** - Type-safe selectors and interactions
 - **Modular Organization** - Separate test files for each feature area
 
-### 🔍 Comprehensive Testing
+### Testing Coverage
 
 - **Functional Testing** - Complete user workflows
 - **Negative Testing** - Error handling and validation
 - **API Testing** - HTTP request validation
-- **Visual Regression** - Screenshot comparison testing
+- **Visual Regression** - Screenshot comparison
 - **Data-Driven Tests** - Parameterized test execution
 
-### 📊 Reporting & Monitoring
+### Reporting
 
 - **Multi-Format Reports** - HTML, JSON, JUnit
-- **Screenshot Capture** - On-failure screenshots
-- **Video Recording** - Test execution videos (on failure)
-- **Trace Files** - Detailed test trace for debugging
-- **CI/CD Integration** - Automated GitHub Actions workflows
+- **Screenshot Capture** - Automatic on-failure screenshots
+- **Video Recording** - Test execution videos
+- **Trace Files** - Detailed test debugging
+- **CI/CD Integration** - GitHub Actions workflows
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 PortfolioProject-PlayWright/
@@ -93,7 +93,7 @@ PortfolioProject-PlayWright/
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -129,7 +129,7 @@ PortfolioProject-PlayWright/
 
 ---
 
-## 🏃 Running Tests
+## Running Tests
 
 ### Run All Tests
 
@@ -200,63 +200,63 @@ npx playwright show-report
 
 ---
 
-## 📊 Test Coverage
+## Test Coverage
 
-### Test Cases (25 Total)
+### Test Cases
 
-#### 1️⃣ Login Test Cases (TC-01 to TC-05)
+#### Login Test Cases (TC-01 to TC-05)
 
-- ✅ TC-01: Login with valid credentials
-- ✅ TC-02: Login with invalid username
-- ✅ TC-03: Login with invalid password
-- ✅ TC-04: Login with empty credentials
-- ✅ TC-05: Login with locked-out user
+- TC-01: Login with valid credentials
+- TC-02: Login with invalid username
+- TC-03: Login with invalid password
+- TC-04: Login with empty credentials
+- TC-05: Login with locked-out user
 
-#### 2️⃣ Product Page Test Cases (TC-06 to TC-10)
+#### Product Page Test Cases (TC-06 to TC-10)
 
-- ✅ TC-06: Verify product list is displayed
-- ✅ TC-07: Add single product to cart
-- ✅ TC-08: Remove product from cart
-- ✅ TC-09: Add multiple products to cart
-- ✅ TC-10: Verify product sorting (low to high)
+- TC-06: Verify product list is displayed
+- TC-07: Add single product to cart
+- TC-08: Remove product from cart
+- TC-09: Add multiple products to cart
+- TC-10: Verify product sorting (low to high)
 
-#### 3️⃣ Cart Test Cases (TC-11 to TC-14)
+#### Cart Test Cases (TC-11 to TC-14)
 
-- ✅ TC-11: Navigate to cart page
-- ✅ TC-12: Verify selected items appear in cart
-- ✅ TC-13: Remove item from cart page
-- ✅ TC-14: Continue shopping from cart
+- TC-11: Navigate to cart page
+- TC-12: Verify selected items appear in cart
+- TC-13: Remove item from cart page
+- TC-14: Continue shopping from cart
 
-#### 4️⃣ Checkout Test Cases (TC-15 to TC-19)
+#### Checkout Test Cases (TC-15 to TC-19)
 
-- ✅ TC-15: Proceed to checkout
-- ✅ TC-16: Checkout with valid user information
-- ✅ TC-17: Checkout with missing first name (validation)
-- ✅ TC-18: Verify total price calculation
-- ✅ TC-19: Complete checkout process
+- TC-15: Proceed to checkout
+- TC-16: Checkout with valid user information
+- TC-17: Checkout with missing first name (validation)
+- TC-18: Verify total price calculation
+- TC-19: Complete checkout process
 
-#### 5️⃣ Logout Test Cases (TC-20 to TC-21)
+#### Logout Test Cases (TC-20 to TC-21)
 
-- ✅ TC-20: Logout from application
-- ✅ TC-21: Verify session ends after logout
+- TC-20: Logout from application
+- TC-21: Verify session ends after logout
 
-#### 6️⃣ Security & Session Tests (TC-22 to TC-23)
+#### Security & Session Tests (TC-22 to TC-23)
 
-- ✅ TC-22: Access product page without login
-- ✅ TC-23: Refresh page after logout
+- TC-22: Access product page without login
+- TC-23: Refresh page after logout
 
-#### 7️⃣ UI & Usability Tests (TC-24 to TC-25)
+#### UI & Usability Tests (TC-24 to TC-25)
 
-- ✅ TC-24: Verify error messages are readable
-- ✅ TC-25: Verify buttons are clickable and responsive
+- TC-24: Verify error messages are readable
+- TC-25: Verify buttons are clickable and responsive
 
-#### 🎲 Data-Driven Tests
+#### Data-Driven Tests
 
 - Multiple login scenarios with different credentials
 - Checkout form validation with multiple data sets
 - Product sorting with various options
 
-#### 📷 Visual Regression Tests
+#### Visual Regression Tests
 
 - Login page layout
 - Inventory page layout
@@ -265,7 +265,7 @@ npx playwright show-report
 - Checkout form layout
 - Error message styling
 
-#### 🔗 API Tests
+#### API Tests
 
 - Product endpoint verification
 - Login endpoint validation
@@ -273,11 +273,11 @@ npx playwright show-report
 
 ---
 
-## 🏛️ Architecture
+## Architecture
 
-### Page Object Model (POM)
+### Page Object Model
 
-The project uses a well-structured POM pattern for maintainability:
+The project uses a structured POM pattern for maintainability:
 
 ```typescript
 // Example: LoginPage.ts
@@ -316,7 +316,7 @@ export const test = base.extend<TestFixtures>({
 
 ### Test Organization
 
-Tests are organized by feature/page:
+Tests are organized by feature:
 
 - Login tests
 - Product page tests
@@ -327,7 +327,7 @@ Tests are organized by feature/page:
 
 ---
 
-## 🎯 Advanced Features
+## Advanced Features
 
 ### Data-Driven Testing
 
@@ -368,18 +368,18 @@ expect(response.status()).toBe(200);
 
 ---
 
-## 🤖 CI/CD Integration
+## CI/CD Integration
 
 ### GitHub Actions
 
 The project includes an automated GitHub Actions workflow that:
 
-✅ Runs on every push and pull request  
-✅ Tests across multiple Node versions (18.x, 20.x)  
-✅ Tests across multiple browsers (Chromium, Firefox, WebKit)  
-✅ Retries failed tests automatically  
-✅ Uploads test reports and videos as artifacts  
-✅ Generates detailed test results
+- Runs on every push and pull request
+- Tests across multiple Node versions (18.x, 20.x)
+- Tests across multiple browsers (Chromium, Firefox, WebKit)
+- Retries failed tests automatically
+- Uploads test reports and videos as artifacts
+- Generates detailed test results
 
 **Workflow file:** `.github/workflows/playwright.yml`
 
@@ -406,34 +406,34 @@ export default defineConfig({
 
 ---
 
-## 📈 Performance & Best Practices
+## Performance & Best Practices
 
 ### Test Optimization
 
-- ✅ Parallel test execution (when safe)
-- ✅ Optimized selectors (role-based, data-test)
-- ✅ Smart waits (auto-wait for elements)
-- ✅ Fixture reuse to reduce setup time
+- Parallel test execution (when safe)
+- Optimized selectors (role-based, data-test)
+- Smart waits (auto-wait for elements)
+- Fixture reuse to reduce setup time
 
 ### Code Quality
 
-- ✅ TypeScript for type safety
-- ✅ Consistent naming conventions
-- ✅ DRY principles (Page Object Model)
-- ✅ Clear test descriptions
-- ✅ Proper error handling
+- TypeScript for type safety
+- Consistent naming conventions
+- DRY principles (Page Object Model)
+- Clear test descriptions
+- Proper error handling
 
 ### Test Reliability
 
-- ✅ Retry logic for flaky tests
-- ✅ Explicit waits instead of sleep()
-- ✅ Trace collection for debugging
-- ✅ Screenshot on failure
-- ✅ Video recording on failure
+- Retry logic for flaky tests
+- Explicit waits instead of sleep()
+- Trace collection for debugging
+- Screenshot on failure
+- Video recording on failure
 
 ---
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Tests Timing Out
 
@@ -468,7 +468,7 @@ npx playwright show-trace test-results/trace.zip
 
 ---
 
-## 📚 Additional Resources
+## Resources
 
 - **Playwright Docs:** https://playwright.dev/
 - **Playwright Best Practices:** https://playwright.dev/docs/best-practices
@@ -477,7 +477,7 @@ npx playwright show-trace test-results/trace.zip
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please follow these guidelines:
 
@@ -488,15 +488,15 @@ Contributions welcome! Please follow these guidelines:
 
 ---
 
-## 📝 License
+## License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## ✉️ Contact & Questions
+## Contact
 
 For questions about this project or Playwright automation, feel free to reach out!
 
-**Portfolio Project:** Enterprise-Level Playwright Test Automation  
+**Project:** Playwright Test Automation Suite  
 **Technologies:** Playwright, TypeScript, Node.js, GitHub Actions
