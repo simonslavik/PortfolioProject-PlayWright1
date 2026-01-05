@@ -14,8 +14,8 @@ End-to-end test automation suite built with **Playwright** testing framework for
 - [Test Coverage](#test-coverage)
 - [Architecture](#architecture)
 - [Advanced Features](#advanced-features)
-- [CI/CD Integration](#cicd-integration)
-- [Contributing](#contributing)
+- [Troubleshooting](#troubleshooting)
+- [Resources](#resources)
 
 ---
 
@@ -24,14 +24,12 @@ End-to-end test automation suite built with **Playwright** testing framework for
 This project tests the **Sauce Demo** e-commerce application (https://www.saucedemo.com/) with comprehensive test cases covering:
 
 - User Authentication (Login scenarios)
-- Product Catalog (Browsing, Sorting, Filtering)
+- Product Catalog (Browsing, Sorting)
 - Shopping Cart Operations
-- Checkout Process & Validation
 - Session Management & Security
 - UI/Usability Testing
-- API Integration Testing
-- Visual Regression Testing
 - Data-Driven Testing
+- Advanced Logging & Debugging
 
 ---
 
@@ -39,26 +37,26 @@ This project tests the **Sauce Demo** e-commerce application (https://www.sauced
 
 ### Architecture
 
-- **Page Object Model (POM)** - Structured page abstractions
-- **Custom Fixtures** - Reusable test setup with authentication
-- **TypeScript Support** - Type-safe selectors and interactions
+- **Page Object Model (POM)** - Structured page abstractions in TypeScript
+- **Custom Fixtures** - Reusable test setup with authentication and logging
+- **TypeScript Support** - Type-safe page objects and utilities
 - **Modular Organization** - Separate test files for each feature area
+- **Advanced Logging** - Custom logger with file output and test context
 
 ### Testing Coverage
 
 - **Functional Testing** - Complete user workflows
 - **Negative Testing** - Error handling and validation
-- **API Testing** - HTTP request validation
-- **Visual Regression** - Screenshot comparison
 - **Data-Driven Tests** - Parameterized test execution
+- **Session & Security** - Access control and session management
 
-### Reporting
+### Reporting & Debugging
 
 - **Multi-Format Reports** - HTML, JSON, JUnit
 - **Screenshot Capture** - Automatic on-failure screenshots
-- **Video Recording** - Test execution videos
-- **Trace Files** - Detailed test debugging
-- **CI/CD Integration** - GitHub Actions workflows
+- **Video Recording** - Test execution videos (on failure)
+- **Trace Files** - Detailed test debugging (on first retry)
+- **Custom Logging** - Structured logs with timestamps and test context
 
 ---
 
@@ -68,26 +66,28 @@ This project tests the **Sauce Demo** e-commerce application (https://www.sauced
 PortfolioProject-PlayWright/
 ├── tests/
 │   ├── pages/
-│   │   └── BasePage.ts              # Page Object Models
-│   ├── fixtures.ts                  # Custom Playwright fixtures
+│   │   └── BasePage.ts              # Page Object Models (Login, Inventory, Cart, Checkout)
+│   ├── utils/
+│   │   ├── logger.ts                # Custom logging utility
+│   │   └── testUtils.ts             # Test helper functions
+│   ├── config/
+│   │   └── config.ts                # Test configuration and credentials
+│   ├── fixtures.ts                  # Basic Playwright fixtures
+│   ├── fixtures-with-logging.ts     # Extended fixtures with logging support
 │   ├── Login-TestCases.spec.js      # Login test scenarios (TC-01 to TC-05)
-│   ├── ProductPage-TestCases.spec.js # Product page tests (TC-06 to TC-10)
-│   ├── Cart-TestCases.spec.js       # Shopping cart tests (TC-11 to TC-14)
-│   ├── Checkout-TestCases.spec.js   # Checkout flow tests (TC-15 to TC-19)
-│   ├── Logout-TestCases.spec.js     # Logout tests (TC-20 to TC-21)
-│   ├── SecuritySession-TestCases.spec.js # Security tests (TC-22 to TC-23)
-│   ├── UI-Usability-TestCases.spec.js    # UI tests (TC-24 to TC-25)
+│   ├── ProductPage-TestCases.spec.js # Product page tests (TC-10 to TC-14)
+│   ├── Cart-TestCases.spec.js       # Shopping cart tests (TC-07, TC-08, TC-09, TC-11)
+│   ├── Logout-TestCases.spec.js     # Logout tests (TC-15 to TC-16)
+│   ├── SecuritySession-TestCases.spec.js # Security tests (TC-17 to TC-18)
+│   ├── UI-Usability-TestCases.spec.js    # UI tests (TC-19 to TC-20)
 │   ├── DataDriven-Tests.spec.js     # Parameterized data-driven tests
-│   ├── VisualRegression-Tests.spec.js    # Visual regression tests
-│   ├── API-Tests.spec.js            # API integration tests
-│   └── example.spec.js              # Example test file
-├── .github/workflows/
-│   └── playwright.yml               # GitHub Actions CI/CD
-├── playwright.config.js             # Playwright configuration
-├── playwright-report/               # Generated HTML reports
-├── test-results/                    # Test artifacts (videos, traces)
+│   └── Example-WithLogging.spec.js  # Example tests with advanced logging
+├── logs/                            # Test execution logs
 ├── screenshots/                     # Screenshot artifacts
+├── test-results/                    # Test results and traces
+├── playwright.config.js             # Playwright configuration
 ├── package.json
+├── TEST_CASES.md                    # Detailed test case documentation
 └── README.md
 ```
 
@@ -159,6 +159,7 @@ npx playwright test --project=chromium --project=firefox
 npx playwright test tests/Login-TestCases.spec.js
 npx playwright test tests/ProductPage-TestCases.spec.js
 npx playwright test tests/DataDriven-Tests.spec.js
+npx playwright test tests/Example-WithLogging.spec.js
 ```
 
 ### Run Tests by Pattern
@@ -167,11 +168,14 @@ npx playwright test tests/DataDriven-Tests.spec.js
 # Run all login tests
 npx playwright test --grep "Login"
 
-# Run all checkout tests
-npx playwright test --grep "Checkout"
+# Run all cart tests
+npx playwright test --grep "Cart"
 
-# Run only visual regression tests
-npx playwright test VisualRegression
+# Run tests with logging
+npx playwright test Example-WithLogging
+
+# Run data-driven tests
+npx playwright test DataDriven
 ```
 
 ### Run Tests in Debug Mode
@@ -198,78 +202,60 @@ npx playwright test --trace on
 npx playwright show-report
 ```
 
----
-
 ## Test Coverage
 
 ### Test Cases
 
 #### Login Test Cases (TC-01 to TC-05)
 
-- TC-01: Login with valid credentials
-- TC-02: Login with invalid username
-- TC-03: Login with invalid password
-- TC-04: Login with empty credentials
-- TC-05: Login with locked-out user
+- **TC-01:** Login with valid credentials
+- **TC-02:** Login with invalid username
+- **TC-03:** Login with invalid password
+- **TC-04:** Login with empty credentials
+- **TC-05:** Login with locked-out user
 
-#### Product Page Test Cases (TC-06 to TC-10)
+#### Product Page Test Cases (TC-10 to TC-14)
 
-- TC-06: Verify product list is displayed
-- TC-07: Add single product to cart
-- TC-08: Remove product from cart
-- TC-09: Add multiple products to cart
-- TC-10: Verify product sorting (low to high)
+- **TC-10:** Verify product list is displayed
+- **TC-11:** Add single product to cart
+- **TC-12:** Remove product from cart
+- **TC-13:** Add multiple products to cart
+- **TC-14:** Verify product sorting by price (low to high)
 
-#### Cart Test Cases (TC-11 to TC-14)
+#### Cart Test Cases (TC-07 to TC-11)
 
-- TC-11: Navigate to cart page
-- TC-12: Verify selected items appear in cart
-- TC-13: Remove item from cart page
-- TC-14: Continue shopping from cart
+- **TC-07:** Verify selected items appear in cart
+- **TC-08:** Remove item from cart page
+- **TC-09:** Continue shopping from cart
+- **TC-11:** Navigate to cart page
 
-#### Checkout Test Cases (TC-15 to TC-19)
+#### Logout Test Cases (TC-15 to TC-16)
 
-- TC-15: Proceed to checkout
-- TC-16: Checkout with valid user information
-- TC-17: Checkout with missing first name (validation)
-- TC-18: Verify total price calculation
-- TC-19: Complete checkout process
+- **TC-15:** Logout from application
+- **TC-16:** Verify session ends after logout
 
-#### Logout Test Cases (TC-20 to TC-21)
+#### Security & Session Tests (TC-17 to TC-18)
 
-- TC-20: Logout from application
-- TC-21: Verify session ends after logout
+- **TC-17:** Access product page without login
+- **TC-18:** Refresh page after logout
 
-#### Security & Session Tests (TC-22 to TC-23)
+#### UI & Usability Tests (TC-19 to TC-20)
 
-- TC-22: Access product page without login
-- TC-23: Refresh page after logout
-
-#### UI & Usability Tests (TC-24 to TC-25)
-
-- TC-24: Verify error messages are readable
-- TC-25: Verify buttons are clickable and responsive
+- **TC-19:** Verify error messages are readable
+- **TC-20:** Verify buttons are clickable and responsive
 
 #### Data-Driven Tests
 
-- Multiple login scenarios with different credentials
-- Checkout form validation with multiple data sets
-- Product sorting with various options
+- Multiple login scenarios with different credentials (valid, invalid, locked-out)
+- Automated test generation from data sets
+- Comprehensive login validation matrix
 
-#### Visual Regression Tests
+#### Example Tests with Advanced Logging
 
-- Login page layout
-- Inventory page layout
-- Product card styling
-- Cart page layout
-- Checkout form layout
-- Error message styling
-
-#### API Tests
-
-- Product endpoint verification
-- Login endpoint validation
-- Combined UI + API testing
+- Login scenarios with detailed step-by-step logging
+- Custom logger integration with test fixtures
+- Screenshot capture on failure with logging
+- Test execution tracking and reporting
 
 ---
 
@@ -277,15 +263,27 @@ npx playwright show-report
 
 ### Page Object Model
 
-The project uses a structured POM pattern for maintainability:
+The project uses a structured POM pattern in TypeScript for maintainability:
 
 ```typescript
-// Example: LoginPage.ts
+// BasePage.ts contains all Page Object Models
 export class LoginPage {
   constructor(private page: Page) {}
 
   async goto() {
     await this.page.goto("https://www.saucedemo.com/");
+  }
+
+  async fillUsername(username: string) {
+    await this.page.getByRole("textbox", { name: "Username" }).fill(username);
+  }
+
+  async fillPassword(password: string) {
+    await this.page.getByRole("textbox", { name: "Password" }).fill(password);
+  }
+
+  async clickLogin() {
+    await this.page.getByRole("button", { name: "Login" }).click();
   }
 
   async login(username: string, password: string) {
@@ -294,16 +292,21 @@ export class LoginPage {
     await this.clickLogin();
   }
 
-  // ... other methods
+  async getErrorMessage() {
+    return await this.page.locator('[data-test="error"]').textContent();
+  }
 }
+
+// Similar classes for InventoryPage, CartPage, CheckoutPage
 ```
 
 ### Custom Fixtures
 
-Reusable fixtures for common test setup:
+Two fixture implementations for different testing needs:
+
+**Basic Fixtures** ([fixtures.ts](tests/fixtures.ts)):
 
 ```typescript
-// fixtures.ts
 export const test = base.extend<TestFixtures>({
   authenticatedPage: async ({ page }, use) => {
     const loginPage = new LoginPage(page);
@@ -314,16 +317,58 @@ export const test = base.extend<TestFixtures>({
 });
 ```
 
+**Advanced Fixtures with Logging** ([fixtures-with-logging.ts](tests/fixtures-with-logging.ts)):
+
+```typescript
+export const test = base.extend<TestFixtures>({
+  logger: async ({}, use) => {
+    const logger = createLogger("test");
+    await use(logger);
+  },
+
+  loginPage: async ({ page, logger }, use) => {
+    const loginPage = new LoginPage(page);
+    logger.info("LoginPage initialized");
+    await use(loginPage);
+  },
+  // ... more fixtures with logging integration
+});
+```
+
+### Custom Logger Utility
+
+The project includes a custom logger ([utils/logger.ts](tests/utils/logger.ts)) that provides:
+
+- File-based logging with timestamps
+- Multiple log levels (info, warn, error, success)
+- Test step tracking
+- Test start/end tracking with status
+- Console and file output
+- Integration with Page Object fixtures
+
+Example usage:
+
+```typescript
+const logger = createLogger("test-name");
+logger.testStart("Login with valid credentials");
+logger.step(1, "Navigating to login page");
+logger.info("Username entered", { username: "standard_user" });
+logger.success("User successfully logged in");
+logger.testEnd("test-name", "PASSED");
+```
+
 ### Test Organization
 
-Tests are organized by feature:
+Tests are organized by feature area:
 
-- Login tests
-- Product page tests
-- Cart tests
-- Checkout tests
-- Security/Session tests
-- UI/Usability tests
+- **Login-TestCases.spec.js** - Authentication scenarios
+- **ProductPage-TestCases.spec.js** - Product browsing and cart operations
+- **Cart-TestCases.spec.js** - Shopping cart functionality
+- **Logout-TestCases.spec.js** - Logout and session cleanup
+- **SecuritySession-TestCases.spec.js** - Access control and security
+- **UI-Usability-TestCases.spec.js** - UI validation and usability
+- **DataDriven-Tests.spec.js** - Parameterized test execution
+- **Example-WithLogging.spec.js** - Advanced logging demonstrations
 
 ---
 
@@ -331,105 +376,108 @@ Tests are organized by feature:
 
 ### Data-Driven Testing
 
-Run the same test with multiple data sets:
+Run the same test logic with multiple data sets using parameterized tests:
 
 ```javascript
+// DataDriven-Tests.spec.js
 const loginTestData = [
-  { username: "standard_user", password: "secret_sauce", shouldSucceed: true },
-  { username: "invalid_user", password: "secret_sauce", shouldSucceed: false },
-  // ... more data
+  {
+    username: "standard_user",
+    password: "secret_sauce",
+    shouldSucceed: true,
+    description: "Valid credentials",
+  },
+  {
+    username: "invalid_user",
+    password: "secret_sauce",
+    shouldSucceed: false,
+    expectedError: "Username and password do not match",
+    description: "Invalid username",
+  },
+  {
+    username: "locked_out_user",
+    password: "secret_sauce",
+    shouldSucceed: false,
+    expectedError: "this user has been locked out",
+    description: "Locked out user",
+  },
 ];
 
-loginTestData.forEach(({ username, password, shouldSucceed }) => {
-  test(`Login with ${username}`, async ({ page }) => {
-    // test implementation
-  });
+loginTestData.forEach(
+  ({ username, password, shouldSucceed, expectedError, description }) => {
+    test(`Login test - ${description}`, async ({ page }) => {
+      // test implementation with dynamic data
+    });
+  }
+);
+```
+
+### Advanced Logging System
+
+The project includes a sophisticated logging system for enhanced debugging:
+
+**Features:**
+
+- Timestamped log entries
+- Multiple log levels (INFO, WARN, ERROR, SUCCESS)
+- File-based log storage in `logs/` directory
+- Test execution tracking (start/end with status)
+- Step-by-step test progression logging
+- Screenshot integration on failures
+- Console and file output
+
+**Usage Example:**
+
+```javascript
+test("TC-01: Login with valid credentials - With Logging", async ({
+  page,
+  loginPage,
+  logger,
+}) => {
+  const testLogger = createLogger("TC-01-login-valid");
+  testLogger.testStart("Login with valid credentials");
+
+  try {
+    testLogger.step(1, "Navigating to login page");
+    await loginPage.goto();
+
+    testLogger.step(2, "Entering valid username");
+    await loginPage.fillUsername(config.testUser.validUsername);
+    testLogger.info("Username entered", {
+      username: config.testUser.validUsername,
+    });
+
+    testLogger.step(3, "Clicking login button");
+    await loginPage.clickLogin();
+
+    testLogger.success("User successfully logged in and redirected");
+    testLogger.testEnd("TC-01-login-valid", "PASSED");
+  } catch (error) {
+    testLogger.error("Test failed", error);
+    await TestUtils.takeScreenshot(page, `TC-01-failure-${Date.now()}`);
+    testLogger.testEnd("TC-01-login-valid", "FAILED");
+    throw error;
+  }
 });
 ```
 
-### Visual Regression Testing
+### Configuration Management
 
-Capture and compare screenshots:
+Centralized configuration ([config/config.ts](tests/config/config.ts)) for:
 
-```javascript
-await expect(page).toHaveScreenshot("login-page.png", {
-  maxDiffPixels: 100,
-});
-```
+- Test user credentials
+- Environment URLs
+- Test data
+- Reusable test settings
 
-### API Testing
+### Test Utilities
 
-Validate both UI and API responses:
+Helper functions ([utils/testUtils.ts](tests/utils/testUtils.ts)) for:
 
-```javascript
-const response = await request.get("https://www.saucedemo.com/inventory.html");
-expect(response.status()).toBe(200);
-```
-
----
-
-## CI/CD Integration
-
-### GitHub Actions
-
-The project includes an automated GitHub Actions workflow that:
-
-- Runs on every push and pull request
-- Tests across multiple Node versions (18.x, 20.x)
-- Tests across multiple browsers (Chromium, Firefox, WebKit)
-- Retries failed tests automatically
-- Uploads test reports and videos as artifacts
-- Generates detailed test results
-
-**Workflow file:** `.github/workflows/playwright.yml`
-
-### Configuration Highlights
-
-```javascript
-// playwright.config.js
-export default defineConfig({
-  testDir: "./tests",
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: [
-    ["html", { outputFolder: "playwright-report" }],
-    ["json", { outputFile: "test-results/results.json" }],
-    ["junit", { outputFile: "test-results/junit.xml" }],
-  ],
-  use: {
-    screenshot: "only-on-failure",
-    video: "retain-on-failure",
-    trace: "on-first-retry",
-  },
-});
-```
-
----
-
-## Performance & Best Practices
-
-### Test Optimization
-
-- Parallel test execution (when safe)
-- Optimized selectors (role-based, data-test)
-- Smart waits (auto-wait for elements)
-- Fixture reuse to reduce setup time
-
-### Code Quality
-
-- TypeScript for type safety
-- Consistent naming conventions
-- DRY principles (Page Object Model)
-- Clear test descriptions
-- Proper error handling
-
-### Test Reliability
-
-- Retry logic for flaky tests
-- Explicit waits instead of sleep()
-- Trace collection for debugging
-- Screenshot on failure
-- Video recording on failure
+- Screenshot capture
+- Common test operations
+- Reusable assertions
+- Test data management
 
 ---
 
@@ -456,6 +504,16 @@ npx playwright install --with-deps
 npx playwright test --debug tests/Login-TestCases.spec.js
 ```
 
+### View Test Logs
+
+```bash
+# Check logs directory
+ls -la logs/
+
+# View specific log file
+cat logs/TC-01-login-valid-2026-01-05.log
+```
+
 ### Check Test Results
 
 ```bash
@@ -473,30 +531,21 @@ npx playwright show-trace test-results/trace.zip
 - **Playwright Docs:** https://playwright.dev/
 - **Playwright Best Practices:** https://playwright.dev/docs/best-practices
 - **Sauce Demo:** https://www.saucedemo.com/
-- **GitHub Actions:** https://github.com/features/actions
+- **Test Case Documentation:** [TEST_CASES.md](TEST_CASES.md)
 
 ---
 
-## Contributing
+## Project Highlights
 
-Contributions welcome! Please follow these guidelines:
-
-1. Create a feature branch
-2. Add tests for new features
-3. Ensure all tests pass
-4. Submit a pull request
-
----
-
-## License
-
-This project is open source and available under the MIT License.
-
----
-
-## Contact
-
-For questions about this project or Playwright automation, feel free to reach out!
+- ✅ **Page Object Model** in TypeScript for maintainable test code
+- ✅ **Custom Fixtures** for reusable test setup
+- ✅ **Advanced Logging** with file output and test tracking
+- ✅ **Data-Driven Testing** for parameterized test execution
+- ✅ **Comprehensive Coverage** across authentication, cart, and security
+- ✅ **Screenshot & Video** capture on failures
+- ✅ **Multiple Browsers** support (Chromium, Firefox, WebKit)
 
 **Project:** Playwright Test Automation Suite  
-**Technologies:** Playwright, TypeScript, Node.js, GitHub Actions
+**Technologies:** Playwright, TypeScript, JavaScript, Node.js
+
+---
