@@ -16,11 +16,11 @@ Note: Includes negative testing and business rules validation
 
 | TC    | Description                                   | Expected Result                                     |
 | ----- | --------------------------------------------- | --------------------------------------------------- |
-| TC-06 | Verify product list is displayed              | All products load correctly with name, price, image |
-| TC-07 | Add single product to cart                    | Cart icon updates with item count                   |
-| TC-08 | Remove product from cart                      | Item is removed and cart count updates              |
-| TC-09 | Add multiple products to cart                 | Correct item count shown in cart                    |
-| TC-10 | Verify product sorting by price (low to high) | Products are sorted correctly                       |
+| TC-10 | Verify product list is displayed              | All products load correctly with name, price, image |
+| TC-11 | Add single product to cart                    | Cart icon updates with item count                   |
+| TC-12 | Remove product from cart                      | Item is removed and cart count updates              |
+| TC-13 | Add multiple products to cart                 | Correct item count shown in cart                    |
+| TC-14 | Verify product sorting by price (low to high) | Products are sorted correctly                       |
 
 Note: Includes sorting and filtering functionality
 
@@ -30,50 +30,36 @@ Note: Includes sorting and filtering functionality
 
 | TC    | Description                          | Expected Result                       |
 | ----- | ------------------------------------ | ------------------------------------- |
-| TC-11 | Navigate to cart page                | Cart page loads successfully          |
-| TC-12 | Verify selected items appear in cart | Correct products and prices displayed |
-| TC-13 | Remove item from cart page           | Item is removed successfully          |
-| TC-14 | Continue shopping from cart          | User returns to products page         |
+| TC-06 | Navigate to cart page                | Cart page loads successfully          |
+| TC-07 | Verify selected items appear in cart | Correct products and prices displayed |
+| TC-08 | Remove item from cart page           | Item is removed successfully          |
+| TC-09 | Continue shopping from cart          | User returns to products page         |
 
 ---
 
-## 4. Checkout Test Cases
-
-| TC    | Description                          | Expected Result                   |
-| ----- | ------------------------------------ | --------------------------------- |
-| TC-15 | Proceed to checkout                  | Checkout page opens               |
-| TC-16 | Checkout with valid user information | User proceeds to overview page    |
-| TC-17 | Checkout with missing first name     | Validation error displayed        |
-| TC-18 | Verify total price calculation       | Total = item price + tax          |
-| TC-19 | Complete checkout process            | Order confirmation page displayed |
-
-Note: Includes total price calculation and tax validation
-
----
-
-## 5. Logout Test Cases
+## 4. Logout Test Cases
 
 | TC    | Description                      | Expected Result                               |
 | ----- | -------------------------------- | --------------------------------------------- |
-| TC-20 | Logout from application          | User is redirected to login page              |
-| TC-21 | Verify session ends after logout | User cannot access product page without login |
+| TC-15 | Logout from application          | User is redirected to login page              |
+| TC-16 | Verify session ends after logout | User cannot access product page without login |
 
 Note: Includes session validation
 
 ---
 
-## 6. Security & Session Tests
+## 5. Security & Session Tests
 
 | TC    | Description                       | Expected Result          |
 | ----- | --------------------------------- | ------------------------ |
-| TC-22 | Access product page without login | Redirected to login page |
-| TC-23 | Refresh page after logout         | User remains logged out  |
+| TC-17 | Access product page without login | Redirected to login page |
+| TC-18 | Refresh page after logout         | User remains logged out  |
 
 ---
 
-## 7. UI & Usability Tests
+## 6. UI & Usability Tests
 
 | TC    | Description                                 | Expected Result                 |
 | ----- | ------------------------------------------- | ------------------------------- |
-| TC-24 | Verify error messages are readable          | Error text is clear and visible |
-| TC-25 | Verify buttons are clickable and responsive | No UI issues                    |
+| TC-19 | Verify error messages are readable          | Error text is clear and visible |
+| TC-20 | Verify buttons are clickable and responsive | No UI issues                    |

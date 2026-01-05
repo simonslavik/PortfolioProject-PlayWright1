@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
 
 
 test.describe('Product Page Test Cases', () => {
-  test('TC-06: Verify product list is displayed', async ({ page }) => {
+  test('TC-10: Verify product list is displayed', async ({ page }) => {
     const products = page.locator('.inventory_item');
     await expect(products.first()).toBeVisible();
     const count = await products.count();
@@ -25,13 +25,13 @@ test.describe('Product Page Test Cases', () => {
     }
   });
 
-  test('TC-07: Add single product to cart', async ({ page }) => {
+  test('TC-11: Add single product to cart', async ({ page }) => {
     await page.locator('button', { hasText: 'Add to cart' }).first().click();
     const cartBadge = page.locator('.shopping_cart_badge');
     await expect(cartBadge).toHaveText('1');
   });
 
-  test('TC-08: Remove product from cart', async ({ page }) => {
+  test('TC-12: Remove product from cart', async ({ page }) => {
     // Add and then remove
     const addBtn = page.locator('button', { hasText: 'Add to cart' }).first();
     await addBtn.click();
@@ -41,7 +41,7 @@ test.describe('Product Page Test Cases', () => {
     await expect(cartBadge).toHaveCount(0);
   });
 
-  test('TC-09: Add multiple products to cart', async ({ page }) => {
+  test('TC-13: Add multiple products to cart', async ({ page }) => {
     const addButtons = page.locator('button', { hasText: 'Add to cart' });
     const count = await addButtons.count();
     const itemsToAdd = Math.min(3, count);
@@ -52,7 +52,7 @@ test.describe('Product Page Test Cases', () => {
     await expect(cartBadge).toHaveText(itemsToAdd.toString());
   });
 
-  test('TC-10: Verify product sorting by price (low to high)', async ({ page }) => {
+  test('TC-14: Verify product sorting by price (low to high)', async ({ page }) => {
     await page.locator('.product_sort_container').selectOption('lohi');
     const prices = await page.locator('.inventory_item_price').allTextContents();
     const priceNumbers = prices.map(p => parseFloat(p.replace('$', '')));

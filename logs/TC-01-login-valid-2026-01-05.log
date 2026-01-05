@@ -1,0 +1,80 @@
+[2026-01-05T11:24:30.854Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:24:30.856Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:24:31.428Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:24:31.448Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:24:31.449Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:24:31.491Z] [INFO] Password entered
+[2026-01-05T11:24:31.491Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:24:31.563Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:24:31.596Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:24:31.608Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========
+[2026-01-05T11:25:59.440Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:25:59.441Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:26:00.453Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:26:00.499Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:26:00.499Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:26:00.513Z] [INFO] Password entered
+[2026-01-05T11:26:00.513Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:26:00.589Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:26:00.609Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:26:00.610Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========
+[2026-01-05T11:27:25.578Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:27:25.578Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:27:25.861Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:27:25.888Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:27:25.889Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:27:25.895Z] [INFO] Password entered
+[2026-01-05T11:27:25.896Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:27:25.959Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:27:25.980Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:27:25.981Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========
+[2026-01-05T11:31:16.144Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:31:16.146Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:31:16.550Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:31:16.580Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:31:16.581Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:31:16.635Z] [INFO] Password entered
+[2026-01-05T11:31:16.636Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:31:16.696Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:31:16.709Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:31:16.710Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========
+[2026-01-05T11:35:07.685Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:35:07.686Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:35:08.133Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:35:08.168Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:35:08.170Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:35:08.271Z] [INFO] Password entered
+[2026-01-05T11:35:08.275Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:35:08.334Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:35:08.340Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:35:08.341Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========
+[2026-01-05T11:36:31.601Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:36:31.602Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:36:32.413Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:36:32.453Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:36:32.453Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:36:32.470Z] [INFO] Password entered
+[2026-01-05T11:36:32.470Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:36:32.550Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:36:32.564Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:36:32.565Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========
+[2026-01-05T11:37:55.832Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:37:55.833Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:37:56.524Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:37:56.561Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:37:56.563Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:37:56.582Z] [INFO] Password entered
+[2026-01-05T11:37:56.583Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:37:56.642Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:37:56.663Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:37:56.665Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========
+[2026-01-05T11:40:47.208Z] [TEST] ========== TEST START: Login with valid credentials ==========
+[2026-01-05T11:40:47.209Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:40:47.541Z] [STEP] [Step 2] Entering valid username
+[2026-01-05T11:40:47.566Z] [INFO] Username entered - {"username":"standard_user"}
+[2026-01-05T11:40:47.566Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:40:47.618Z] [INFO] Password entered
+[2026-01-05T11:40:47.618Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:40:47.669Z] [STEP] [Step 5] Verifying redirect to inventory page
+[2026-01-05T11:40:47.674Z] [SUCCESS] User successfully logged in and redirected
+[2026-01-05T11:40:47.674Z] [TEST] ========== TEST END: TC-01-login-valid - PASSED ==========

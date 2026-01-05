@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.57.0",
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^25.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }

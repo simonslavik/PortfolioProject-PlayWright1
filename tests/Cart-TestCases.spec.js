@@ -23,7 +23,7 @@ test.describe('Cart Test Cases', () => {
     await expect(page.locator('.cart_list')).toBeVisible();
   });
 
-  test('TC-12: Verify selected items appear in cart', async ({ page }) => {
+  test('TC-07: Verify selected items appear in cart', async ({ page }) => {
     // Navigate to cart page
     await page.locator('.shopping_cart_link').click();
 
@@ -40,7 +40,7 @@ test.describe('Cart Test Cases', () => {
     }
   });
 
-  test('TC-13: Remove item from cart page', async ({ page }) => {
+  test('TC-08: Remove item from cart page', async ({ page }) => {
     // Navigate to cart page
     await page.locator('.shopping_cart_link').click();
 
@@ -57,7 +57,7 @@ test.describe('Cart Test Cases', () => {
     expect(updatedCount).toBe(initialCount - 1);
   });
 
-  test('TC-14: Continue shopping from cart', async ({ page }) => {
+  test('TC-09: Continue shopping from cart', async ({ page }) => {
     // Navigate to cart page
     await page.locator('.shopping_cart_link').click();
 

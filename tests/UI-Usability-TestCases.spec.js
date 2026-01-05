@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('UI & Usability Tests', () => {
-  test('TC-24: Verify error messages are readable', async ({ page }) => {
+  test('TC-19: Verify error messages are readable', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 
     // Try to login without credentials
@@ -21,7 +21,7 @@ test.describe('UI & Usability Tests', () => {
     await expect(errorMessage).toHaveCSS('visibility', 'visible');
   });
 
-  test('TC-25: Verify buttons are clickable and responsive', async ({ page }) => {
+  test('TC-20: Verify buttons are clickable and responsive', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 
     // Check login button is visible and clickable

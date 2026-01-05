@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Security & Session Tests', () => {
-  test('TC-22: Access product page without login', async ({ page }) => {
+  test('TC-17: Access product page without login', async ({ page }) => {
     // Try to access product page directly without logging in
     await page.goto('https://www.saucedemo.com/inventory.html');
 
@@ -11,7 +11,7 @@ test.describe('Security & Session Tests', () => {
     await expect(page.locator('.login_logo')).toBeVisible();
   });
 
-  test('TC-23: Refresh page after logout', async ({ page }) => {
+  test('TC-18: Refresh page after logout', async ({ page }) => {
     // Login first
     await page.goto('https://www.saucedemo.com/');
     await page.getByRole('textbox', { name: 'Username' }).fill('standard_user');

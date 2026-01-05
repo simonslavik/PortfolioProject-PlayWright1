@@ -1,0 +1,116 @@
+[2026-01-05T11:24:31.358Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:24:31.358Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:24:31.936Z] [SUCCESS] Login completed
+[2026-01-05T11:24:31.937Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:24:32.060Z] [INFO] Product 1 added to cart
+[2026-01-05T11:24:32.093Z] [INFO] Product 2 added to cart
+[2026-01-05T11:24:32.093Z] [SUCCESS] 2 products added to cart
+[2026-01-05T11:24:32.093Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:24:32.128Z] [INFO] Cart page loaded
+[2026-01-05T11:24:32.129Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:24:32.168Z] [INFO] Checkout page loaded
+[2026-01-05T11:24:32.169Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:24:32.220Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:24:32.221Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:25:01.406Z] [ERROR] Checkout failed - {}
+[2026-01-05T11:26:00.877Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:26:00.879Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:26:01.745Z] [SUCCESS] Login completed
+[2026-01-05T11:26:01.745Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:26:02.176Z] [INFO] Product 1 added to cart
+[2026-01-05T11:26:02.232Z] [INFO] Product 2 added to cart
+[2026-01-05T11:26:02.232Z] [SUCCESS] 2 products added to cart
+[2026-01-05T11:26:02.233Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:26:02.299Z] [INFO] Cart page loaded
+[2026-01-05T11:26:02.300Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:26:02.373Z] [INFO] Checkout page loaded
+[2026-01-05T11:26:02.374Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:26:02.406Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:26:02.408Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:26:30.732Z] [ERROR] Checkout failed - {}
+[2026-01-05T11:27:26.434Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:27:26.434Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:27:26.969Z] [SUCCESS] Login completed
+[2026-01-05T11:27:26.970Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:27:27.051Z] [SUCCESS] 0 products added to cart
+[2026-01-05T11:27:27.053Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:27:27.143Z] [INFO] Cart page loaded
+[2026-01-05T11:27:27.144Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:27:27.203Z] [INFO] Checkout page loaded
+[2026-01-05T11:27:27.204Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:27:27.238Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:27:27.239Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:27:56.305Z] [ERROR] Checkout failed - {}
+[2026-01-05T11:31:16.160Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:31:16.165Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:31:16.697Z] [SUCCESS] Login completed
+[2026-01-05T11:31:16.698Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:31:16.851Z] [INFO] Product 1 added to cart
+[2026-01-05T11:31:16.884Z] [INFO] Product 2 added to cart
+[2026-01-05T11:31:16.884Z] [SUCCESS] 2 products added to cart
+[2026-01-05T11:31:16.884Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:31:16.918Z] [INFO] Cart page loaded
+[2026-01-05T11:31:16.919Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:31:16.959Z] [INFO] Checkout page loaded
+[2026-01-05T11:31:16.959Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:31:16.974Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:31:16.975Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:31:16.998Z] [ERROR] Checkout failed - {}
+[2026-01-05T11:35:07.703Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:35:07.703Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:35:08.335Z] [SUCCESS] Login completed
+[2026-01-05T11:35:08.335Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:35:08.499Z] [INFO] Product 1 added to cart
+[2026-01-05T11:35:08.535Z] [INFO] Product 2 added to cart
+[2026-01-05T11:35:08.536Z] [SUCCESS] 2 products added to cart
+[2026-01-05T11:35:08.536Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:35:08.590Z] [INFO] Cart page loaded
+[2026-01-05T11:35:08.594Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:35:08.642Z] [INFO] Checkout page loaded
+[2026-01-05T11:35:08.642Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:35:08.676Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:35:08.676Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:35:37.776Z] [ERROR] Checkout failed - {}
+[2026-01-05T11:36:32.712Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:36:32.712Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:36:33.588Z] [SUCCESS] Login completed
+[2026-01-05T11:36:33.588Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:36:33.988Z] [INFO] Product 1 added to cart
+[2026-01-05T11:36:34.061Z] [INFO] Product 2 added to cart
+[2026-01-05T11:36:34.061Z] [SUCCESS] 2 products added to cart
+[2026-01-05T11:36:34.062Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:36:34.131Z] [INFO] Cart page loaded
+[2026-01-05T11:36:34.133Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:36:34.211Z] [INFO] Checkout page loaded
+[2026-01-05T11:36:34.213Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:36:34.262Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:36:34.264Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:37:02.612Z] [ERROR] Checkout failed - {}
+[2026-01-05T11:37:56.006Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:37:56.007Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:37:56.942Z] [SUCCESS] Login completed
+[2026-01-05T11:37:56.943Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:37:57.077Z] [SUCCESS] 0 products added to cart
+[2026-01-05T11:37:57.078Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:37:57.331Z] [INFO] Cart page loaded
+[2026-01-05T11:37:57.332Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:37:57.382Z] [INFO] Checkout page loaded
+[2026-01-05T11:37:57.382Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:37:57.421Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:37:57.421Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:38:25.908Z] [ERROR] Checkout failed - {}
+[2026-01-05T11:40:47.641Z] [TEST] ========== TEST START: Complete checkout process ==========
+[2026-01-05T11:40:47.642Z] [STEP] [Step 1] Logging in
+[2026-01-05T11:40:48.036Z] [SUCCESS] Login completed
+[2026-01-05T11:40:48.036Z] [STEP] [Step 2] Adding products to cart
+[2026-01-05T11:40:48.208Z] [INFO] Product 1 added to cart
+[2026-01-05T11:40:48.242Z] [INFO] Product 2 added to cart
+[2026-01-05T11:40:48.243Z] [SUCCESS] 2 products added to cart
+[2026-01-05T11:40:48.243Z] [STEP] [Step 3] Navigating to cart
+[2026-01-05T11:40:48.300Z] [INFO] Cart page loaded
+[2026-01-05T11:40:48.301Z] [STEP] [Step 4] Proceeding to checkout
+[2026-01-05T11:40:48.346Z] [INFO] Checkout page loaded
+[2026-01-05T11:40:48.347Z] [STEP] [Step 5] Filling checkout information
+[2026-01-05T11:40:48.369Z] [INFO] Checkout form filled - {"firstName":"John","lastName":"Doe","zipCode":"12345"}
+[2026-01-05T11:40:48.369Z] [STEP] [Step 6] Proceeding to checkout overview
+[2026-01-05T11:41:17.594Z] [ERROR] Checkout failed - {}

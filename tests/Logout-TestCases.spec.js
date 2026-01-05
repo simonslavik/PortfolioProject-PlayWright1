@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Logout Test Cases', () => {
-  test('TC-20: Logout from application', async ({ page }) => {
+  test('TC-15: Logout from application', async ({ page }) => {
     // Click on menu button
     await page.locator('#react-burger-menu-btn').click();
 
@@ -22,7 +22,7 @@ test.describe('Logout Test Cases', () => {
     await expect(page.locator('.login_logo')).toBeVisible();
   });
 
-  test('TC-21: Verify session ends after logout', async ({ page }) => {
+  test('TC-16: Verify session ends after logout', async ({ page }) => {
     // Logout
     await page.locator('#react-burger-menu-btn').click();
     await page.locator('#logout_sidebar_link').click();

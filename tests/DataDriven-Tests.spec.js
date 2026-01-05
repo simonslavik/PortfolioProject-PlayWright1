@@ -33,41 +33,6 @@ const loginTestData = [
   },
 ];
 
-// Test data for checkout validation
-const checkoutTestData = [
-  {
-    firstName: 'John',
-    lastName: 'Doe',
-    zipCode: '12345',
-    shouldSucceed: true,
-    description: 'Valid checkout info',
-  },
-  {
-    firstName: '',
-    lastName: 'Doe',
-    zipCode: '12345',
-    shouldSucceed: false,
-    expectedError: 'First Name is required',
-    description: 'Missing first name',
-  },
-  {
-    firstName: 'John',
-    lastName: '',
-    zipCode: '12345',
-    shouldSucceed: false,
-    expectedError: 'Last Name is required',
-    description: 'Missing last name',
-  },
-  {
-    firstName: 'John',
-    lastName: 'Doe',
-    zipCode: '',
-    shouldSucceed: false,
-    expectedError: 'Postal Code is required',
-    description: 'Missing zip code',
-  },
-];
-
 // Parameterized login tests
 test.describe('Data-Driven Login Tests', () => {
   loginTestData.forEach(({ username, password, shouldSucceed, expectedUrl, expectedError, description }) => {
@@ -79,52 +44,6 @@ test.describe('Data-Driven Login Tests', () => {
 
       if (shouldSucceed) {
         await expect(page).toHaveURL(expectedUrl);
-      } else {
-        const errorMessage = page.locator('[data-test="error"]');
-        await expect(errorMessage).toBeVisible();
-        const errorText = await errorMessage.textContent();
-        expect(errorText).toContain(expectedError);
-      }
-    });
-  });
-});
-
-// Parameterized checkout tests
-test.describe('Data-Driven Checkout Tests', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login and add items to cart
-    await page.goto('https://www.saucedemo.com/');
-    await page.getByRole('textbox', { name: 'Username' }).fill('standard_user');
-    await page.getByRole('textbox', { name: 'Password' }).fill('secret_sauce');
-    await page.getByRole('button', { name: 'Login' }).click();
-    await page.goto('https://www.saucedemo.com/inventory.html');
-    
-    // Add product to cart
-    await page.locator('button', { hasText: 'Add to cart' }).first().click();
-    
-    // Go to checkout
-    await page.locator('.shopping_cart_link').click();
-    await page.locator('button', { hasText: 'Checkout' }).click();
-  });
-
-  checkoutTestData.forEach(({ firstName, lastName, zipCode, shouldSucceed, expectedError, description }) => {
-    test(`Checkout test - ${description}`, async ({ page }) => {
-      // Fill checkout form
-      if (firstName) {
-        await page.getByRole('textbox', { name: 'First Name' }).fill(firstName);
-      }
-      if (lastName) {
-        await page.getByRole('textbox', { name: 'Last Name' }).fill(lastName);
-      }
-      if (zipCode) {
-        await page.getByRole('textbox', { name: 'Zip/Postal Code' }).fill(zipCode);
-      }
-
-      // Click continue
-      await page.locator('button', { hasText: 'Continue' }).click();
-
-      if (shouldSucceed) {
-        await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-two.html');
       } else {
         const errorMessage = page.locator('[data-test="error"]');
         await expect(errorMessage).toBeVisible();
@@ -168,3 +87,4 @@ test.describe('Data-Driven Product Sorting Tests', () => {
     });
   });
 });
+

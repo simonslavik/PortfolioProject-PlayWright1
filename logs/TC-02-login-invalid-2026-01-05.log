@@ -1,0 +1,80 @@
+[2026-01-05T11:24:31.126Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:24:31.126Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:24:31.503Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:24:31.537Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:24:31.549Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:24:31.609Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:24:31.652Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:24:31.657Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:24:31.666Z] [SUCCESS] Error validation passed
+[2026-01-05T11:24:31.667Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
+[2026-01-05T11:26:00.334Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:26:00.335Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:26:01.252Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:26:01.337Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:26:01.338Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:26:01.346Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:26:01.430Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:26:01.434Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:26:01.446Z] [SUCCESS] Error validation passed
+[2026-01-05T11:26:01.446Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
+[2026-01-05T11:27:26.187Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:27:26.189Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:27:26.674Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:27:26.703Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:27:26.704Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:27:26.714Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:27:26.766Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:27:26.775Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:27:26.780Z] [SUCCESS] Error validation passed
+[2026-01-05T11:27:26.780Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
+[2026-01-05T11:31:16.146Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:31:16.147Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:31:16.540Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:31:16.568Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:31:16.569Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:31:16.635Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:31:16.693Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:31:16.700Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:31:16.709Z] [SUCCESS] Error validation passed
+[2026-01-05T11:31:16.710Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
+[2026-01-05T11:35:07.699Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:35:07.700Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:35:08.075Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:35:08.096Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:35:08.097Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:35:08.142Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:35:08.215Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:35:08.223Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:35:08.247Z] [SUCCESS] Error validation passed
+[2026-01-05T11:35:08.249Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
+[2026-01-05T11:36:32.036Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:36:32.036Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:36:32.860Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:36:32.898Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:36:32.899Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:36:32.914Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:36:32.980Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:36:32.984Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:36:32.990Z] [SUCCESS] Error validation passed
+[2026-01-05T11:36:32.991Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
+[2026-01-05T11:37:55.890Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:37:55.890Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:37:56.395Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:37:56.420Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:37:56.420Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:37:56.428Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:37:56.473Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:37:56.480Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:37:56.486Z] [SUCCESS] Error validation passed
+[2026-01-05T11:37:56.486Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
+[2026-01-05T11:40:47.277Z] [TEST] ========== TEST START: Login with invalid username ==========
+[2026-01-05T11:40:47.278Z] [STEP] [Step 1] Navigating to login page
+[2026-01-05T11:40:47.575Z] [STEP] [Step 2] Entering invalid username
+[2026-01-05T11:40:47.599Z] [WARN] Using invalid username for negative test
+[2026-01-05T11:40:47.599Z] [STEP] [Step 3] Entering password
+[2026-01-05T11:40:47.652Z] [STEP] [Step 4] Clicking login button
+[2026-01-05T11:40:47.701Z] [STEP] [Step 5] Verifying error message appears
+[2026-01-05T11:40:47.705Z] [INFO] Error message received - {"message":"Epic sadface: Username and password do not match any user in this service"}
+[2026-01-05T11:40:47.709Z] [SUCCESS] Error validation passed
+[2026-01-05T11:40:47.710Z] [TEST] ========== TEST END: TC-02-login-invalid - PASSED ==========
